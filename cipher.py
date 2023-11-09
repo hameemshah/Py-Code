@@ -11,7 +11,7 @@ def decode(msg,sft):
     return  decipher
 
 print("Welcome to cipher")
-task = input("Enter E for encoding and D for decoding:").lower()
+task = input("Enter E for encoding and D for decoding: ").lower()
 
 if(task == 'e'):
     message = input("Enter the message:")
