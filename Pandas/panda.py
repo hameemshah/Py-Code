@@ -1,2 +1,3 @@
 import pandas as pd
-pd.DataFrame({'A' : [1, 2, 3]})
+s = pd.DataFrame({'A' : [1, 2, 3]})
+print(s)
