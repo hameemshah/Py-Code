@@ -62,6 +62,9 @@ def nth_fibonacci(n):
             c = a + b
             b , a = c , b
         return c
+    
+def check_fibonacci(num):
+    return (math.isqrt(5 *(num * num) + 4) == math.sqrt(5 *(num * num) + 4)  or math.isqrt(5 *(num * num) - 4) == math.sqrt(5 *(num * num) - 4))
 
 # def nth_multiple_fibonacci(n, num):
 
