@@ -66,7 +66,19 @@ def nth_fibonacci(n):
 def check_fibonacci(num):
     return (math.isqrt(5 *(num * num) + 4) == math.sqrt(5 *(num * num) + 4)  or math.isqrt(5 *(num * num) - 4) == math.sqrt(5 *(num * num) - 4))
 
-# def nth_multiple_fibonacci(n, num):
+def find_nth_multiple_of_fibonacci(number, n):
+    fib_sequence = [0, 1]
+    multiples_found = 0
+    
+    while multiples_found < n:
+        current_number = fib_sequence[-1]
+
+        if current_number % number == 0:
+            multiples_found += 1
+
+        fib_sequence.append(fib_sequence[-1] + fib_sequence[-2])
+
+    return current_number
 
 def to_ascii(char):
     if len(char) != 1:
