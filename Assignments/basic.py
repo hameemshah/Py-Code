@@ -50,12 +50,10 @@ def check_prime(num):
     return is_prime
 
 def nth_fibonacci(n):
-    a , b = 0 , 1
+    a , b = 1 , 1
     if n < 1:
         return "Plese give correct value"
-    elif n == 1:
-        return 0
-    elif n < 4:
+    elif n < 3:
         return 1
     else:
         for _ in range(n - 2):
@@ -64,6 +62,8 @@ def nth_fibonacci(n):
         return c
     
 def check_fibonacci(num):
+    if num < 1:
+        return False
     return (math.isqrt(5 *(num * num) + 4) == math.sqrt(5 *(num * num) + 4)  or math.isqrt(5 *(num * num) - 4) == math.sqrt(5 *(num * num) - 4))
 
 def find_nth_multiple_of_fibonacci(number, n):
